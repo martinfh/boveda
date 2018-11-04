@@ -1,0 +1,35 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<div>
+  <%= @obra.imagenes.each do |upload| %>
+    <% if imagenes.variable? %>
+      <%= image_tag imagenes.variant(resize: "400x400") %>
+    <% elsif imagenes.previewable? %>
+      <%= image_tag imagenes.preview(resize: "400x400") %>
+    <% end %>
+  <% end %>
+</div>
+<p><strong>Titulo:</strong>
+<%= @obra.titulo%>
+</p>
+<p><strong>Tecnica:</strong>
+<%= @obra.tecnica%>
+</p>
+<p><strong>Medidas:</strong>
+<%= @obra.medidas%>
+</p>
+<p><strong>Año:</strong>
+<%= @obra.año%>
+</p>
+<p><strong>Precio:</strong>
+<%= @obra.precio%>
+</p>
+<p><strong>Disponibilidad:</strong>
+<%= @obra.disponibilidad%>
+</p>
+
+<p>
+	<%= link_to 'Atras', obras_path%>
+	<%=link_to 'INICIO', welcome_index_path%>
+</p>
+
+

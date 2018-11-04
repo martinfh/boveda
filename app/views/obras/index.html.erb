@@ -1,0 +1,58 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<h1><strong>Inventario</strong></h1>
+<p>
+	<%=link_to 'NUEVA OBRA', new_obra_path%>
+</p>
+<table>
+	<tr>
+		<th width="200px">Título</th>
+		<th width="150px">Técnica</th>
+		<th width="100px">Medidas</th>
+		<th width="120px">Año</th>
+		<th width="60px">Precio</th>
+		<th width="150px">Disponibilidad</th>
+		<th width="200px">Imagen</th>
+		<th width="50px">
+		<th width="50px">
+		<th width="50px">
+	</tr>
+	<% @obras.each do |obra|%>
+	<tr>
+		<td>
+			<%= obra.titulo%>
+		</td>
+		<td>
+			<%= obra.tecnica%>
+		</td>
+		<td>
+			<%= obra.medidas%>
+		</td>
+		<td>
+			<%= obra.año%>
+		</td>
+		<td>
+			<%= obra.precio%>
+		</td>
+		<td>
+			<%= obra.disponibilidad%>
+		</td>
+		<td>
+			<%= obra.imagenes%>
+		</td>
+		<td>
+			<%= link_to 'Ver', obra_path(obra)%>
+		</td>
+		<td>
+			<%= link_to 'Editar' , edit_obra_path(obra)%>
+		</td>
+		<td>
+			<%= link_to 'Eliminar' , obra_path(obra),
+			method: :delete %>
+		</td>
+	</tr>
+<% end %> 
+</table>
+<p>
+	<%=link_to 'INICIO', welcome_index_path%> <br>
+	<%= link_to 'Exportar inventario a PDF', obras_path (@obra, :format => :pdf) %>
+</p>
