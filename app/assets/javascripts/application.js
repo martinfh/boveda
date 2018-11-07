@@ -14,3 +14,16 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+// direct_uploads.js
+document.addEventListener ('turbolinks:request-start', function(){
+	document.querySelector('.main').classList.add('fadeout');
+});
+
+document.addEventListener ('turbolinks:render', function(){
+	document.querySelector('.main').classList.add('fadein');
+});
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets

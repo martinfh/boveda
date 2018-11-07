@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+  */
+ @import "bootstrap";
+div {
+	text-align: center;
+}
+.fondoinicio{
+	background-image: url(public/fondo_app.jpg);
+}
+.bg{
+   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAABhJREFUCB1jYMAE/9GFiBeAq4QzoGb9BwAZXgb6+1TkfgAAAABJRU5ErkJggg==
+
+   ) repeat;
+   background-repeat: round;
+}
+
+.recuadronuevaobra{
+	color: black;  
+text-align: center; 
+background: #f5f3f0; 
+overflow: hidden; 
+-webkit-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+-moz-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+-moz-border-radius: 13px 13px 13px 13px;
+-webkit-border-radius: 13px 13px 13px 13px;
+padding: 20px; 
+height: 780px;
+width: 600px;
+margin-top: 50px;
+margin-right: auto;
+margin-bottom: auto;
+margin-left: auto;
+}
+.recuadroinicio {
+color: black;  
+text-align: center; 
+background: #f5f3f0; 
+overflow: hidden; 
+-webkit-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+-moz-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+-moz-border-radius: 13px 13px 13px 13px;
+-webkit-border-radius: 13px 13px 13px 13px;
+padding: 20px; 
+height: 280px;
+width: 340px;
+margin-top: 50px;
+margin-right: auto;
+margin-bottom: auto;
+margin-left: auto;
+}
+.btn-outline-warning a{
+	color: orange;
+}
+.btn-outline-success a{
+	color: green;
+}
+.btn-dark a{
+	color: white;
+	font-family: helvetica;
+}
+.btn-group a{
+	color: white;
+}
+.fadein_largo{
+
+	animation: fadein 3s;
+}
+.fadeout_largo{
+
+	animation: fadein 1s;
+}
+@keyframes fadein_largo {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeout_largo {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+.fadein{
+
+	animation: fadein 1s;
+}
+.fadeout{
+
+	animation: fadein 1s;
+}
+
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes fadeout {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}

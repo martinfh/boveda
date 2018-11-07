@@ -8,19 +8,22 @@ end
 
 	def index
 		@obras = Obra.all 
+		respond_to do |format|
+			format.html
+			format.pdf do 
+				pdf = InventarioPdf.new(@obra)
+				send_data pdf.render, filename:"Inventario.pdf",
+									type:"application/pdf",
+									disposition:"inline"
+
+			end
 	end
+end
 def new
 end
 def show
 	@obra = Obra.find (params[:id])
-	respond_to do |format|
-		format.html
-		format.pdf do render pdf: “inventario”,
- template: “obras_controller/show.html.erb”,
- layout: ‘pdf.html’
-	end
-	end
-	end
+	 end
 	def edit
 		@obra = Obra.find (params[:id])
 	end
@@ -50,5 +53,5 @@ private
 def obra_params
 	params.require(:obras).permit(:titulo, :tecnica, :medidas, :año, :precio, :imagenes, :disponibilidad)
 end
-end
 
+end

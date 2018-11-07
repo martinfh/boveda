@@ -1,5 +1,7 @@
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<h1>Ingresar Nueva Obra</h1>
+
+<body class= "bg">
+<div class = recuadronuevaobra>
+	<h1>Ingresar Nueva Obra</h1>
 <%= form_for :obras, url: obras_path do |f| %>
 <p>
 	<%= f.label :titulo %><br>
@@ -15,7 +17,7 @@
 </p>
 <p>
 	<%= f.label :año %><br>
-	<%= f.date_select :año %>
+	<%= f.date_select  :año %>
 </p>
 <p>
 	<%= f.label :precio, 'Precio USD' %><br>
@@ -29,11 +31,15 @@
 	<%= f.label :disponibilidad %><br>
 	<%= f.text_field :disponibilidad %>
 </p>
-
 <p>
 	<%= f.submit 'Subir Obra' %> 
 </p>
-<p>
-	<%= link_to 'Atras', obras_path%>
-</p>
+&nbsp;&nbsp;
+<div class= "botonentrar">
+<button type="button" class="btn btn-dark">
+	<%= link_to 'Atrás', obras_path%>
+</button>
+</div>
 <% end %>
+</div>
+</body>
