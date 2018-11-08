@@ -1,6 +1,8 @@
 <html>
 <body class= "bg">
-<h2>Log in</h2>
+  <div class = fadein>
+  <div class = recuadrologin>
+<div><h2>Log in</h2>
  &nbsp;&nbsp; 
 <div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -21,13 +23,12 @@
     </div>
   <% end %>
 </div>
-
   <div class="actions">
     <%= f.submit "Entrar" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
 &nbsp;&nbsp;
+<%= render "devise/shared/links" %>
+</div>
 </body>
 </html>

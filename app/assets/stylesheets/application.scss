@@ -15,8 +15,8 @@
 div {
 	text-align: center;
 }
-.fondoinicio{
-	background-image: url(public/fondo_app.jpg);
+.fondopaisaje{
+background-image: url('fondo_app.png');
 }
 .bg{
    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAABhJREFUCB1jYMAE/9GFiBeAq4QzoGb9BwAZXgb6+1TkfgAAAABJRU5ErkJggg==
@@ -25,8 +25,26 @@ div {
    background-repeat: round;
 }
 
+.recuadrologin{
+color: black;  
+text-align: center; 
+background: #f5f3f0; 
+overflow: hidden; 
+-webkit-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+-moz-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
+-moz-border-radius: 13px 13px 13px 13px;
+-webkit-border-radius: 13px 13px 13px 13px;
+padding: 20px; 
+height: 500px;
+width: 550px;
+margin-top: 50px;
+margin-right: auto;
+margin-bottom: auto;
+margin-left: auto;
+}
 .recuadronuevaobra{
-	color: black;  
+color: black;  
 text-align: center; 
 background: #f5f3f0; 
 overflow: hidden; 

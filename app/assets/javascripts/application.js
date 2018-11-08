@@ -16,6 +16,7 @@
 //= require_tree .
 
 // direct_uploads.js
+
 document.addEventListener ('turbolinks:request-start', function(){
 	document.querySelector('.main').classList.add('fadeout');
 });
