@@ -1,7 +1,7 @@
 class Obra < ApplicationRecord
 
 belongs_to :user
- has_many_attached :imagenes # one-to-many relationship
+ has_one_attached :imagen
 end
 
 private

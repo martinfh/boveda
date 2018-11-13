@@ -6,7 +6,7 @@ class CreateObras < ActiveRecord::Migration[5.2]
       t.string :medidas
       t.date :año
       t.integer :precio
-      t.binary :imagenes
+      t.binary :imagen
       t.string :disponibilidad
       t.string :string
 

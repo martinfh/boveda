@@ -13,9 +13,12 @@ class InventarioPdf < Prawn::Document
 	table obra_id_all do
 		self.header = true
 		row(0).font_style = :bold
-		columns(1..6).align = :center
-		self.row_colors = ["DDDDDD","FFFFFF"]
-		border_width = 1
+		columns(0..2).align = :left
+		columns(2..6).align = :right
+	
+
+		border_width = 0
+
 	end
 	end
 	def obra_id_all

@@ -1,40 +1,40 @@
 
 <!DOCTYPE html>
 <html>
-<header align = left >
-	<div class="btn-group" role="group" aria-label="Basic example">
-	<% if user_signed_in? %>
-		<button type="button" class="btn btn-secondary">
-			<%= link_to current_user.email, edit_user_registration_path %>
-		</button>
-		<button type="button" class="btn btn-secondary">
-			<%= link_to "salir", destroy_user_session_path, method: :delete %>
-		</button>
-			<% else %>
-		<button type="button" class="btn btn-secondary">
-			<%= link_to 'Iniciar sesión', new_user_session_path%></button>
-		<button type="button" class="btn btn-secondary">
-			<%= link_to 'Registrarse', new_user_registration_path%></button>
-		<%end%>
-	</div>
-</header > 
-<body class= "bg">
-	<div>
-	<h1 class=fadein align=center> 
-		<%= image_tag 'logo/boveda.png',style:"height:280px";%>
-		</h1>
-	<div align=center class= recuadroinicio>
-		<div class = fadein_largo>
-			<p>
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
-			</p>
-			<div class= "botonentrar">
-				<button type="button" class="btn btn-dark">
-					<%= link_to 'Ingresar', obras_path%>
-				</button>
+	<header align = left >
+		<div class="btn-group" role="group" aria-label="Basic example">
+		<% if user_signed_in? %>
+			<button type="button" class="btn btn-secondary">
+				<%= link_to current_user.email, edit_user_registration_path %>
+			</button>
+			<button type="button" class="btn btn-secondary">
+				<%= link_to "salir", destroy_user_session_path, method: :delete %>
+			</button>
+				<% else %>
+			<button type="button" class="btn btn-secondary">
+				<%= link_to 'Iniciar sesión', new_user_session_path%></button>
+			<button type="button" class="btn btn-secondary">
+				<%= link_to 'Registrarse', new_user_registration_path%></button>
+			<%end%>
+		</div>
+	</header > 
+	<body class= "bg">
+		<div>
+			<h1 class=fadein align=center> 
+			<%= image_tag 'logo/boveda.png',style:"height:280px";%>
+			</h1>
+		<div align=center class= recuadroinicio>
+			<div class = fadein_largo>
+				<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
+				</p>
+				<div class= "botonentrar">
+					<button type="button" class="btn btn-dark">
+						<%= link_to 'Ingresar', obras_path%>
+					</button>
+				</div>
 			</div>
 		</div>
-	</div>
-	</div>
-</body>
+		</div>
+	</body>
 </html>

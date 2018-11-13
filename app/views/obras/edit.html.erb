@@ -1,34 +1,34 @@
 <h1>Editar Obra</h1>
-<%= form_for @obra, url: obras_path do |f| %>
-<p>
-	<%= f.label :titulo %><br>
-	<%= f.text_field :titulo %>
-</p>
-<p>
-	<%= f.label :tecnica %> <br>
-	<%= f.text_field :tecnica%>
-</p>
-<p>
-	<%= f.label :medidas %> <br>
-	<%= f.text_field :medidas %>
-</p>
-<p>
-	<%= f.label :año %><br>
-	<%= f.date_select :año %>
-</p>
-<p>
-	<%= f.label :precio, 'Precio' %><br>
-	<%= f.number_field :precio %>
-</p>
-<p>
-	<%=f.label :imagenes %><br>
-	<%=f.file_field :imagenes, multiple: true %>
-</p>
-<p>
-	<%= f.label :disponibilidad %><br>
-	<%= f.text_field :disponibilidad %>
-</p>
-<p>
-	<%= f.submit 'Editar Obra' %> 
-</p>
-<% end %>
+	<%= form_for @obra, url: obras_path do |f| %>
+	<p>
+		<%= f.label :titulo %><br>
+		<%= f.text_field :titulo %>
+	</p>
+	<p>
+		<%= f.label :tecnica %> <br>
+		<%= f.text_field :tecnica%>
+	</p>
+	<p>
+		<%= f.label :medidas %> <br>
+		<%= f.text_field :medidas %>
+	</p>
+	<p>
+		<%= f.label :año %><br>
+		<%= f.date_select :año %>
+	</p>
+	<p>
+		<%= f.label :precio, 'Precio' %><br>
+		<%= f.number_field :precio %>
+	</p>
+	<p>
+		<%=f.label :imagenes %><br>
+		<%=f.file_field :imagen, multiple: true %>
+	</p>
+	<p>
+		<%= f.label :disponibilidad %><br>
+		<%= f.text_field :disponibilidad %>
+	</p>
+	<p>
+		<%= f.submit 'Editar Obra' %> 
+	</p>
+		<% end %>

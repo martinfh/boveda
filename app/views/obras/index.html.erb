@@ -1,70 +1,81 @@
 
+<!DOCTYPE html>
+<html>
 <header>
-	<div style= "text-align: right"><button type="button" class="btn btn-outline-success"><%=link_to 'INICIO', welcome_index_path %>
-		</button> </div>
-   <h1><strong>Inventario</strong></h1>
+	<div style= "text-align: right">
+		<button type="button" class="btn btn-outline-success">
+			<%=link_to 'INICIO', welcome_index_path %>
+		</button> 
+	</div>
+ <h1 class = fadein><%= image_tag 'logo/cartel_inventario.png',style:"height:120px";%></h1>
 	<div style= "text-align: left">
-<button type="button" class="btn btn-outline-primary">
-	<%=link_to 'NUEVA OBRA', new_obra_path %>
+		<button type="button" class="btn btn-outline-primary">
+			<%=link_to 'NUEVA OBRA', new_obra_path %>
 		</button>
-		</div>
+	</div>
 </header>
+<body>
 &nbsp;&nbsp;
-<table class= "table table-hover">
-	<thead class= "thead-dark thead-light">
-	<tr>
-		<th width="200px">Título</th>
-		<th width="150px">Técnica</th>
-		<th width="100px">Medidas</th>
-		<th width="120px">Año</th>
-		<th width="60px">Precio</th>
-		<th width="150px">Disponibilidad</th>
-		<th width="200px">Imagen</th>
-		<th width="50px">
-		<th width="50px">
-		<th width="50px">
-	</tr>
-	</thead>
-	<% @obras.each do |obra|%>
-	<tr>
-		<td>
-			<%= obra.titulo%>
-		</td>
-		<td>
-			<%= obra.tecnica%>
-		</td>
-		<td>
-			<%= obra.medidas%>
-		</td>
-		<td>
-			<%= obra.año%>
-		</td>  
-		<td>
-			<%= obra.precio%>
-		</td>
-		<td>
-			<%= obra.disponibilidad%>
-		</td>
-		<td>
-			<%= obra.imagenes%>
-		</td>
-		<td>
-			<%= link_to 'Ver', obra_path(obra)%>
-		</td>
-		<td>
-			<%= link_to 'Editar' , edit_obra_path(obra)%>
-		</td>
-		<td>
-			<%= link_to 'Eliminar' , obra_path(obra),
-			method: :delete %>
-		</td>
-	</tr>
-<% end %> 
-</table>
-<footer>
+	<table class= "table table-hover table-borderless" style="background-color: #ffffff";>
+		<thead class= "tthead-light">
+			<tr>
+				<th width="200px">Título</th>
+				<th width="150px">Técnica</th>
+				<th width="100px">Medidas</th>
+				<th width="120px">Año</th>
+				<th width="60px">Precio</th>
+				<th width="150px">Disponibilidad</th>
+				<th width="200px"></th>
+			</tr>
+		</thead>
+			<% @obras.each do |obra|%>
+		<tr>
+			<td>
+				<%= obra.titulo%>
+			</td>
+			<td>
+				<%= obra.tecnica%>
+			</td>
+			<td>
+				<%= obra.medidas%>
+			</td>
+			<td>
+				<%= obra.año%>
+			</td>  
+			<td>
+				<%= obra.precio%>
+			</td>
+			<td>
+				<%= obra.disponibilidad%>
+			</td>
+			<td>
+				<%=obra.imagen%>
+			</td>
+				<td>
+					<div class="btn-group" role="group" aria-label="Basic example">
+						<button type="button" class="btn btn-secondary">
+								<%= link_to 'Ver', obra_path(obra)%>
+							</button>
+				
+						<button type="button" class="btn btn-secondary">
+								<%= link_to 'Editar' , edit_obra_path(obra)%>
+							</button>
+					
+						<button type="button" class="btn btn-secondary">
+								<%= link_to 'Eliminar' , obra_path(obra), method: :delete %>
+						</button>
+				</div>
+				</td>
+			
+		</tr>
+	<% end %> 
+	</table>
+</body>
+<footer">
 	<p style= "text-align: right;">
-		<button type="button" class="btn btn-outline-warning text-danger">
-		<%= link_to 'Exportar inventario a PDF', obras_path(@obras, format: 'pdf')%>
+		<button type="button" class="btn btn-warning text-danger">
+			<%= link_to 'Exportar inventario a PDF', obras_path(@obras, format: 'pdf')%>
 		</button>
 	</p>
 </footer>
+</html>

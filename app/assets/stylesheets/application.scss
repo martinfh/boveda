@@ -24,7 +24,30 @@ background-image: url('fondo_app.png');
    ) repeat;
    background-repeat: round;
 }
-
+.fondoshowobra{
+	background-color: #F8F8FF;
+}
+.fondogradienteindex{
+	background: rgb(252,255,244); /* Old browsers */
+background: -moz-linear-gradient(-45deg, rgba(252,255,244,1) 0%, rgba(223,229,215,1) 40%, rgba(179,190,173,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(252,255,244,1) 0%,rgba(223,229,215,1) 40%,rgba(179,190,173,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.contenedordeobras{
+	background: #FFFFFF;
+	border: dotted;
+	overflow: hidden; 
+-moz-border-radius: 13px 13px 13px 13px;
+-webkit-border-radius: 13px 13px 13px 13px;
+padding: 20px; 
+height: 900px;
+width: 600px;
+margin-top: 10px;
+margin-right: auto;
+margin-bottom: auto;
+margin-left: auto;
+}
 .recuadrologin{
 color: black;  
 text-align: center; 
@@ -78,6 +101,9 @@ margin-top: 50px;
 margin-right: auto;
 margin-bottom: auto;
 margin-left: auto;
+}
+.btn-warning{
+	color: orange;
 }
 .btn-outline-warning a{
 	color: orange;

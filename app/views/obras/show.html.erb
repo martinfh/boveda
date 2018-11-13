@@ -1,39 +1,52 @@
 <header align = right >
-  <p style= "text-align: right;"><div class="btn-group" role="group" aria-label="Basic example">
-	<button type="button" class="btn btn-secondary"><%= link_to 'Atrás', obras_path%></button>
-	<button type="button" class="btn btn-secondary"><%=link_to 'INICIO', welcome_index_path%></button>
-</div></p>
+  <p style= "text-align: right;">
+	  	<div class="btn-group" role="group" aria-label="Basic example">
+			<button type="button" class="btn btn-secondary">
+				<%= link_to 'Atrás', obras_path%>
+			</button>
+			<button type="button" class="btn btn-secondary">
+				<%=link_to 'INICIO', welcome_index_path%>
+			</button>
+		</div>
+	</p>
 </header>
-<body style="align-items: center;">
- <div>
-</div>
-<div style= "text-align: left;" >
-<p><strong>
-<%= @obra.titulo%>
-</strong>
-</p>
-<p><i>
-<%= @obra.tecnica%>
-</i>
-</p>
-<p>
-<%= @obra.medidas%>
-</p>
-<p>
-<%= @obra.año%>
-</p>
-<p><strong>Precio USD:</strong>
-<%= @obra.precio%>
-</p>
-<p><strong>Disponibilidad:</strong>
-<%= @obra.disponibilidad%>
-</p>
-</div>
-
-  </body>
-  <p style= "text-align: left;">
-  	<%= link_to 'Exportar a PDF'%>
-  </p>
+<body style="align-items: center;"class = fondoshowobra>
+	<div class=contenedordeobras>
+		<p>
+		<%= image_tag @obra.imagen ,style:"height:500px";%>
+		</p>
+		<p><strong>
+		<%= @obra.titulo%>
+		</strong>
+		</p>
+		<p><i>
+		<%= @obra.tecnica%>
+		</i>
+		</p>
+		<p>
+		<%= @obra.medidas%>
+		</p>
+		<p>
+		<%= @obra.año%>
+		</p>
+		&nbsp&nbsp
+		<p><strong>Precio USD:</strong>
+		<%= @obra.precio%>
+		</p>
+		<p><strong>Disponibilidad:</strong>
+		<%= @obra.disponibilidad%>
+		</p>
+		&nbsp&nbsp&nbsp&nbsp
+	  	<p style= "text-align: center;">
+	  		<button type="button" class="btn btn-warning">
+	  			<%= link_to 'Exportar a PDF'%>
+	  		</button>
+	  </p>
+	</div>
+</body>
+<footer>
+	
+</footer>
 
 
 

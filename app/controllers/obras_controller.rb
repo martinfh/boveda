@@ -51,7 +51,7 @@ def destroy
 
 private
 def obra_params
-	params.require(:obras).permit(:titulo, :tecnica, :medidas, :año, :precio, :imagenes, :disponibilidad)
+	params.require(:obras).permit(:titulo, :tecnica, :medidas, :año, :precio, :imagen, :disponibilidad)
 end
 
 end
