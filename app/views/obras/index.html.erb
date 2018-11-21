@@ -7,8 +7,13 @@
 			<%=link_to 'INICIO', welcome_index_path %>
 		</button> 
 	</div>
- <h1 class = fadein><%= image_tag 'logo/inventarix.png',style:"height:100px";%></h1>
+ <h1 style= "text-align: center" class = fadein><%= image_tag 'logo/inventarix.png',style:"height:100px";%></h1>
 	<div style= "text-align: left">
+		<p style= "text-align: right;">
+			<button type="button" class="btn btn-warning text-danger">
+				<%= link_to 'Exportar inventario a PDF', obras_path(@obras, format: 'pdf')%>
+			</button>
+		</p>
 		<button type="button" class="btn btn-outline-primary">
 			<%=link_to 'NUEVA OBRA', new_obra_path %>
 		</button>
@@ -75,11 +80,6 @@
 	</table>
 </div>
 </body>
-<footer">
-	<p style= "text-align: right;">
-		<button type="button" class="btn btn-warning text-danger">
-			<%= link_to 'Exportar inventario a PDF', obras_path(@obras, format: 'pdf')%>
-		</button>
-	</p>
+<footer>
 </footer>
 </html>
