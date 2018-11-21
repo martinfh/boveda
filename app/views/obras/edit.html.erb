@@ -1,5 +1,5 @@
 <h1>Editar Obra</h1>
-	<%= form_for @obra, url: obras_path do |f| %>
+	<%= form_for @obra, url: obras_path, :method => :POST do |f| %>
 	<p>
 		<%= f.label :titulo %><br>
 		<%= f.text_field :titulo %>

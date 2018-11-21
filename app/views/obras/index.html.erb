@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <header>
-	<div style= "text-align: right">
+	<div style= "text-align: left">
 		<button type="button" class="btn btn-outline-success">
 			<%=link_to 'INICIO', welcome_index_path %>
 		</button> 
 	</div>
- <h1 class = fadein><%= image_tag 'logo/cartel_inventario.png',style:"height:120px";%></h1>
+ <h1 class = fadein><%= image_tag 'logo/inventarix.png',style:"height:100px";%></h1>
 	<div style= "text-align: left">
 		<button type="button" class="btn btn-outline-primary">
 			<%=link_to 'NUEVA OBRA', new_obra_path %>
@@ -16,15 +16,16 @@
 </header>
 <body>
 &nbsp;&nbsp;
-	<table class= "table table-hover table-borderless" style="background-color: #ffffff";>
+<div style="overflow-x:auto;">
+	<table>
 		<thead class= "tthead-light">
 			<tr>
-				<th width="200px">Título</th>
-				<th width="150px">Técnica</th>
-				<th width="100px">Medidas</th>
-				<th width="120px">Año</th>
-				<th width="60px">Precio</th>
-				<th width="150px">Disponibilidad</th>
+				<th width="250px">TÍTULO</th>
+				<th width="150px">TÉCNICA</th>
+				<th width="100px">MEDIDAS</th>
+				<th width="120px">AÑO</th>
+				<th width="60px">PRECIO</th>
+				<th width="150px">DISPONIBILIDAD</th>
 				<th width="200px"></th>
 			</tr>
 		</thead>
@@ -50,7 +51,7 @@
 			</td>
 			<td>
 				<div>
-				<%=obra.imagen%>
+				<%=image_tag obra.imagen.variant(resize: "200x200")%> 
 			</div>
 			</td>
 				<td>
@@ -72,6 +73,7 @@
 		</tr>
 	<% end %> 
 	</table>
+</div>
 </body>
 <footer">
 	<p style= "text-align: right;">
