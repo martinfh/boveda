@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'galerias/index'
   devise_for :users
   get 'welcome/index'
   resources :obras
