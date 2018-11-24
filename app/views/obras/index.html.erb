@@ -2,27 +2,31 @@
 <!DOCTYPE html>
 <html>
 <header>
-	<div style= "text-align: left">
-		<button type="button" class="btn btn-outline-success">
-			<%=link_to 'INICIO', welcome_index_path %>
-		</button> 
+	<div style= "text-align: left" class = fadein>
+			<%=link_to (image_tag 'logo/flecha_atras_app.png',style:"height:60px"), welcome_index_path %>
 	</div>
- <h1 style= "text-align: center" class = fadein><%= image_tag 'logo/inventarix.png',style:"height:100px";%></h1>
-	<div style= "text-align: left">
-		<p style= "text-align: right;">
-			<button type="button" class="btn btn-warning text-danger">
-				<%= link_to 'Exportar inventario a PDF', obras_path(@obras, format: 'pdf')%>
+ <h1 style= "text-align: center" class = fadein>
+ 	<%= image_tag 'logo/inventarix.png',style:"height:100px";%></h1>
+	
+	<div class = clearfix>
+		<div class = box style="text-align:left;">
+			<button class = boton_nuevaobra>
+				<%=link_to 'NUEVA OBRA', new_obra_path, class: 'colorboton' %>
 			</button>
-		</p>
-		<button type="button" class="btn btn-outline-primary">
-			<%=link_to 'NUEVA OBRA', new_obra_path %>
-		</button>
+		</div>
+		<div class = box style="text-align:right">
+				<button type="button" class= boton_exportar>
+					<%= link_to 'Exportar inventario a PDF', obras_path(@obras, format: 'pdf'), class: 'colorboton'%>
+				</button>
+		</div>
 	</div>
 </header>
+&nbsp;&nbsp;
+
 <body>
 &nbsp;&nbsp;
-<div style="overflow-x:auto;">
-	<table>
+<div>
+	<table class= fadein_largo>
 		<thead class= "tthead-light">
 			<tr>
 				<th width="250px">TÍTULO</th>

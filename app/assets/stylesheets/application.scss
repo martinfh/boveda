@@ -18,6 +18,24 @@ div {
 }
 tr:hover {background-color:#F0FFF0;}
 
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    float: left;
+    width: 50%;
+    padding: 15px;
+    height: 55px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
 th {
 	font-family: "Courier", monospace;
 	font-weight: bold;
@@ -28,6 +46,62 @@ th {
  	padding: 10px;
     text-align: center;
 
+}
+
+.colorboton{
+	color: black;
+}
+
+.colorboton:hover{
+	color: black;
+}
+.boton_nuevaobra{
+	width: 270px;
+	border: 3px solid black;
+	display: inline-block;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.boton_nuevaobra:hover {
+	background-color: white
+}
+.boton_nuevaobra:active {
+	background-color: white;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+.boton_exportar{
+	width: 190px;
+	border: 3px solid black;
+	display: inline-block;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  color: black;
+  background-color: yellow;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.boton_exportar:hover {
+	background-color: yellow
+}
+.boton_exportar:active {
+	background-color: yellow;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }
 
 td {

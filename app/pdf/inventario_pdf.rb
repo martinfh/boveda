@@ -15,9 +15,8 @@ class InventarioPdf < Prawn::Document
 		row(0).font_style = :bold
 		columns(0..2).align = :left
 		columns(2..6).align = :right
-	
-
-		border_width = 0
+		columns(0..6).borders = :bottom, :top
+		style columns(0..6), :font_size => 3
 
 	end
 	end

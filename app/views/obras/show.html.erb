@@ -1,5 +1,5 @@
-<header align = right >
-  <p style= "text-align: right;">
+<header align = left >
+  <p style= "text-align: left;">
 	  	<div class="btn-group" role="group" aria-label="Basic example">
 			<button type="button" class="btn btn-secondary">
 				<%= link_to 'Atrás', obras_path%>
@@ -31,16 +31,16 @@
 		<%= @obra.año%>
 		</p>
 		&nbsp&nbsp
-		<p><strong>Precio USD:</strong>
+		<!--<p><strong>Precio USD:</strong>
 		<%= @obra.precio%>
 		</p>
 		<p><strong>Disponibilidad:</strong>
 		<%= @obra.disponibilidad%>
-		</p>
+		</p>-->
 		&nbsp&nbsp&nbsp&nbsp
 	  	<p style= "text-align: center;">
 	  		<button type="button" class="btn btn-warning">
-	  			<%= link_to 'Exportar a PDF'%>
+	  			<%= link_to 'Exportar a PDF',obras_path(@obras, format: 'pdf')%>
 	  		</button>
 	  </p>
 	</div>
