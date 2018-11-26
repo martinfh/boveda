@@ -1,4 +1,8 @@
 class GaleriasController < ApplicationController
+
+before_action :authenticate_user!
+
+ 
   def index
   @obras = Obra.all 
 		respond_to do |format|
@@ -46,5 +50,4 @@ private
 def obra_params
 	params.require(:obras).permit(:artista, :titulo, :tecnica, :medidas, :año, :precio, :imagen, :vendido,:disponibilidad)
 end
-
 end

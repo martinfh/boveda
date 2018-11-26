@@ -55,6 +55,30 @@ th {
 .colorboton:hover{
 	color: black;
 }
+.boton_galeria{
+	width: 100px;
+	border: 3px solid black;
+	display: inline-block;
+  padding: 10px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.boton_galeria:hover {
+	background-color: white
+}
+.boton_galeria:active {
+	background-color: white;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
 .boton_nuevaobra{
 	width: 270px;
 	border: 3px solid black;
@@ -198,7 +222,7 @@ box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
 -moz-border-radius: 13px 13px 13px 13px;
 -webkit-border-radius: 13px 13px 13px 13px;
 padding: 20px; 
-height: 280px;
+height: 290px;
 width: 340px;
 margin-top: 50px;
 margin-right: auto;

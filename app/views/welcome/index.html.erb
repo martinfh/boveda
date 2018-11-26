@@ -20,26 +20,27 @@
 	</header > 
 	<body class= "bg">
 		<div>
-			<h1 class=fadein align=center> 
+			<h1 class=fadein > 
 			<%= image_tag 'logo/boveda.png',style:"height:280px";%>
 			</h1>
-		<div align=center class= recuadroinicio>
-			<div class = fadein_largo>
+		<div class= recuadroinicio>
+			<div class = fadein_largo align=center>
 				<p>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
 				</p>
-				<div class= "botonentrar">
-					<button type="button" class="btn btn-dark">
-						<%= link_to 'Galeria', galerias_index_path%>
-					</button>
-				</div>
-				<div class= "botonentrar">
-					<button type="button" class="btn btn-dark">
-						<%= link_to 'Artista', obras_path%>
-					</button>
-				</div>
-			</div>
 		</div>
+		<div class = "clearfix">
+					<div class = box style="text-align:right;">
+						<button class = boton_galeria>
+							<%= link_to 'Galeria', galerias_index_path, class: 'colorboton'%>
+						</button>
+					</div>
+					<div class = box style="text-align:left;">
+						<button class="boton_galeria">
+							<%= link_to 'Artistx', obras_path,  class: 'colorboton'%>
+						</button>
+					</div>
+				</div>
 		</div>
 	</body>
 </html>
