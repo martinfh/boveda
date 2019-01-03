@@ -21,13 +21,13 @@ end
 def show
 	@obra = Obra.find (params[:id])
 	 end
-	def edit
+def edit
 		@obra = Obra.find (params[:id])
 	end
-	def update
+def update
 		@obra = Obra.find (params[:id])
 		if @obra.update (obra_params)
-			redirect_to @obras
+			redirect_to galerias_index_path
 		else
 			render 'edit' 
 		end
@@ -36,13 +36,13 @@ def create
 	#render plain: params[:obra].inspect
 	@obra = current_user.obras.new(obra_params)
 	@obra.save
-	redirect_to obras_path
+	redirect_to galerias_index_path
 end
 def destroy
 	@obra = Obra.find (params[:id])
 	@obra.destroy
 
-	redirect_to obras_path
+	redirect_to galerias_index_path
 	end
 
 

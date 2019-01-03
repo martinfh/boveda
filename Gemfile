@@ -31,9 +31,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'aws-sdk-s3'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary', '~> 0.12.3.1'
 # Use ActiveStorage variant
 gem 'mini_magick'
-
+gem 'money', '~> 6.13', '>= 6.13.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -44,7 +46,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
-
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'

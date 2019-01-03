@@ -1,21 +1,19 @@
-
 <!DOCTYPE html>
 <html>
 <header>
 	<nav>
-		<div style= "text-align: left; float: left;padding-top: 15px;padding-left: 10px;padding-bottom: 20px;" class = fadein>
-			<%=link_to (image_tag 'logo/flecha_atras_simple.png',style:"height:60px"), welcome_index_path %>
-		</div>
-			<div class = 'campo_busqueda'>
-			<%=form_tag obras_path, method: :get do%>
-			<%=text_field_tag :search, params[:search], class: "busqueda" %>
-			<%=submit_tag "Buscar", class: "boton_buscar"%>
-			<%end%>
-		</div>
-	</nav>
-</header>
+	<div class = 'campo_busqueda'>
+	<%=form_tag(obras_path,method: :get)do%>
+	<%=text_field_tag(:search, nil, placeholder: "buscar")%>
+	<%=submit_tag ("Buscar")%>
+	<%end%>
+	</div>
+	<div style= "text-align: left" class = fadein>
+			<%=link_to (image_tag 'logo/flecha_atras_app.png',style:"height:60px"), welcome_index_path %>
+	</div>
  <h1 style= "text-align: center" class = fadein>
- 	<%= image_tag 'logo/header_inventario.png',style:"height:50px; padding-top:10px;";%></h1>
+ 	<%= image_tag 'logo/inventarix.png',style:"height:100px";%></h1>
+	
 	<div class = clearfix>
 		<div class = box style="text-align:left;">
 			<button class = boton_nuevaobra>
@@ -24,10 +22,11 @@
 		</div>
 		<div class = box style="text-align:right">
 				<button type="button" class= boton_exportar>
-					<%= link_to 'Exportar a PDF', obras_path(@obras, format: 'pdf'), class: 'colorboton'%>
+					<%= link_to 'Exportar inventario a PDF', obras_path(@obras, format: 'pdf'), class: 'colorboton'%>
 				</button>
 		</div>
 	</div>
+</header>
 &nbsp;&nbsp;
 
 <body>
@@ -36,7 +35,7 @@
 	<table class= fadein_largo>
 		<thead class= "tthead-light">
 			<tr>
-				<th width="250px"><%=sortable 'TÍTULO', 'name', 'asc'%></th>
+				<th width="250px">TÍTULO</th>
 				<th width="150px">TÉCNICA</th>
 				<th width="100px">MEDIDAS</th>
 				<th width="120px">AÑO</th>
@@ -57,7 +56,7 @@
 				<%= obra.medidas%>
 			</td>
 			<td>
-				<%= obra.año.strftime("%Y")%>
+				<%= obra.año%>
 			</td>  
 			<td>
 				<%= obra.precio%>

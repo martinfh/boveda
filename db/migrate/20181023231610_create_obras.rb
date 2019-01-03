@@ -1,6 +1,7 @@
 class CreateObras < ActiveRecord::Migration[5.2]
   def change
     create_table :obras do |t|
+      t.string :artista
       t.string :titulo
       t.text :tecnica
       t.string :medidas
