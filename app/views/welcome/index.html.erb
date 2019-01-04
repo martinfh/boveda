@@ -27,7 +27,11 @@
 		<div class = "clearfix">
 					<div class = box style="text-align:right;">
 						<button class = boton_galeria>
+							<%if galeristum_signed_in?%>
 							<%= link_to 'Galeria', galerias_index_path, class: 'colorboton'%>
+							<%else%>
+							<%=link_to 'Galeria', new_galeristum_registration_path%>
+							<%end%>
 						</button>
 					</div>
 					<div class = box style="text-align:left;">
