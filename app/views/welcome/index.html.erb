@@ -10,11 +10,6 @@
 			<button type="button" class="btn btn-secondary">
 				<%= link_to "salir", destroy_user_session_path, method: :delete %>
 			</button>
-				<% else %>
-			<button type="button" class="btn btn-secondary">
-				<%= link_to 'Iniciar sesión', new_user_session_path%></button>
-			<button type="button" class="btn btn-secondary">
-				<%= link_to 'Registrarse', new_user_registration_path%></button>
 			<%end%>
 		</div>
 	</header > 
@@ -36,8 +31,13 @@
 						</button>
 					</div>
 					<div class = box style="text-align:left;">
-						<button class="boton_galeria">
-							<%= link_to 'Artistx', obras_path,  class: 'colorboton'%>
+						<button class="boton_galeria"> 
+						<%if user_signed_in?%>
+						<%=link_to 'Artistx', obras_path%>
+						<%else%>
+							<%=link_to 'Artistx', new_user_registration_path%>
+
+						<%end%>
 						</button>
 					</div>
 				</div>
