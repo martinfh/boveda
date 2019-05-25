@@ -1,6 +1,7 @@
 class Obra < ApplicationRecord
 
-	belongs_to :user
+	belongs_to :user, required: false
+	belongs_to :galerista, required: false
 	has_one_attached :imagen
 
 def self.search(search)

@@ -30,7 +30,7 @@
 							<%if galeristum_signed_in?%>
 							<%= link_to 'Galeria', galerias_index_path, class: 'colorboton'%>
 							<%else%>
-							<%=link_to 'Galeria', new_galeristum_registration_path%>
+							<%=link_to 'Galeria', new_galeristum_session_path%>
 							<%end%>
 						</button>
 					</div>
@@ -39,8 +39,7 @@
 						<%if user_signed_in?%>
 						<%=link_to 'Artistx', obras_path%>
 						<%else%>
-							<%=link_to 'Artistx', new_user_registration_path%>
-
+							<%=link_to 'Artistx', new_user_session_path%>
 						<%end%>
 						</button>
 					</div>

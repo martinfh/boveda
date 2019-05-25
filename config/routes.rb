@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'galerias/edit'
   get 'galerias/show'
   get 'galerias/index'
+  get 'galerias/feria'
+  resources :feria, only: [:create]
   devise_for :users, controllers: {sessions: 'users/sessions'}
   devise_for :galerista, controllers: {sessions: 'galerista/sessions'}
   get 'welcome/index'
