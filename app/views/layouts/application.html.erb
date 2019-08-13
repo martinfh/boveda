@@ -9,11 +9,31 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width-devise-width, initial-scale-1, maximum-scale-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:300,500,700&display=swap" rel="stylesheet">
+   
   </head>
   <body>
-    <div class="notice"><%= notice %>
-      <div class="alert"><%= alert %>
+    <%if notice%>
+      <div id="notice_wrapper">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <%elsif alert%>
+      <div id="notice_wrapper">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end -%>
     <%= yield %>
+   
+    <script type="text/javascript">
+      $(document).ready(function(){
+        setTimeout(function(){
+          $('#notice_wrapper').fadeOut("slow", function(){
+            $(this).remove();
+          })
+          },4500);
+        });
+    </script>
   </body>
   
 </html>

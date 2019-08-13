@@ -2,49 +2,51 @@
 <!DOCTYPE html>
 <html>
 <header>
-	<nav>
-		<div style= "text-align: left; float: left;padding-top: 10px;padding-left: 10px;padding-bottom: 20px;" class = fadein>
-			<%=link_to (image_tag 'logo/flecha_atras_simple.png',style:"height:50px"), welcome_index_path %>
-		</div>
-			<div class = 'campo_busqueda'>
+		<div style= "text-align: center" class = fadein>
+ 			<%= image_tag 'logo/header_inventario.png',style:"height:25px;float:left;"%>
+ 		</div>
+ 		<div class="btn-group" role="group" aria-label="Basic example" style="float: right;">
+		<% if user_signed_in? %>
+			<button type="button" class="btn btn-secondary">
+				<%= link_to current_user.email, edit_user_registration_path %>
+			</button>
+			<button type="button" class="btn btn-secondary">
+				<%= link_to "salir", destroy_user_session_path, method: :delete %>
+			</button>
+		<%end%>
+		</div><br>
+ </header>
+ <body>
+	<div style="width: 100%; float: left; padding-top: 30px;">
+	
+			<button class = boton_nuevaobra style="float: left; margin-bottom: 10px;">
+				<%=link_to 'Nueva Obra', new_obra_path, class: 'colorboton' %>
+			</button>
+		</div><br>
+		<button type="button" class= boton_exportar style="color: black;" >
+					<%= link_to 'Exportar a PDF',obras_path(@obras, :format => :pdf), class: 'colorboton'%>
+			</button>
+		<div class = 'campo_busqueda' style="padding-bottom: 20px;">
 			<%=form_tag obras_path, method: :get do%>
 			<%=text_field_tag :search, params[:search], class: "busqueda" %>
 			<%=submit_tag "Buscar", class: "boton_buscar"%>
 			<%end%>
 		</div>
-	</nav>
-</header>
- <h1 style= "text-align: center" class = fadein>
- 	<%= image_tag 'logo/header_inventario.png',style:"height:30px; margin-top:-90px;";%></h1>
-	<div class = clearfix>
-		<div class = box style="text-align:left;">
-			<button class = boton_nuevaobra>
-				<%=link_to 'Nueva Obra', new_obra_path, class: 'colorboton' %>
-			</button>
-		</div>
-		<div class = box style="text-align:right">
-				<button type="button" class= boton_exportar>
-					<%= link_to 'Exportar a PDF', obras_path(@obras, format: 'pdf'), class: 'colorboton'%>
-				</button>
-		</div>
-	</div>
-&nbsp;&nbsp;
-
-<body>
-&nbsp;&nbsp;
+		
 <div class="tabla-artista">
-	<table class= fadein_largo>
+	<table >
 		<thead class= "tthead-light">
 			<tr>
-				<th>TÍTULO</th>
-				<th>TÉCNICA</th>
-				<th>MEDIDAS</th>
-				<th>AÑO</th>
-				<th >PRECIO</th>
-				<th>SITUACIÓN</th>
+				<th>Título</th>
+				<th>Técnica</th>
+				<th>Medidas</th>
+				<th>Año</th>
+				<th>Precio</th>
+				<th>Situación</th>
 				<th></th>
 			</tr>
 		</thead>
+
 			<% @obras.each do |obra|%>
 		<tr>
 			<td>
@@ -68,7 +70,7 @@
 			<td>
 				<div>
 				<% if obra.imagen.attached? %>
-  					<%=image_tag obra.imagen.variant(resize: "200x200")%> 
+  					<%=image_tag obra.imagen.variant(resize: "150x150")%> 
 			<% end %>
 				</div>
 			</td>
@@ -92,6 +94,7 @@
 	<% end %> 
 	</table>
 </div>
+
 </body>
 <footer>
 </footer>

@@ -12,7 +12,7 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
+
 //= require_tree .
 
 // direct_uploads.js
@@ -20,3 +20,4 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+

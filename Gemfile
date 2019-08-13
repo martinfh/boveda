@@ -12,6 +12,8 @@ gem 'puma', '~> 3.11'
 gem 'prawn', '~> 2.2', '>= 2.2.2'
 gem 'prawn-table', '~> 0.2.2'
 gem 'sass-rails', '~> 5.0'
+gem 'pg'
+gem 'simple_form'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -38,7 +40,7 @@ gem 'mini_magick'
 gem 'money', '~> 6.13', '>= 6.13.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'rails-i18n'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

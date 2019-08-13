@@ -1,9 +1,9 @@
 
 <body class= "bg">
-	<div class = fadein>
+	<div class = "fadein contenedorforms">
 		<div class = recuadronuevaobra>
-			<h1>Ingresar Nueva Obra</h1>
-		<%= form_for :obras, url: obras_path do |f| %>
+			<h1 style="text-align: center;">Ingresar Nueva Obra</h1>
+		<%= form_for :obra, url: obras_path do |f| %>
 		<p>
 			<%= f.label :titulo %><br>
 			<%= f.text_field :titulo %>

@@ -1,0 +1,46 @@
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<table style="font-size: 10px; width: 100%; border: 1px solid grey;border-collapse: collapse;" >
+		<thead class= "tthead-light">
+			<tr style="font-style: bold; height: 50px;">
+				<th style="width: 15%">Titulo</th>
+				<th style="width: 15%">Tecnica</th>
+				<th style="width: 15%">Medidas</th>
+				<th style="width: 15%">Año</th>
+				<th style="width: 15%">Precio</th>
+				<th style="width: 15%">Situacion</th>
+				<th style="width: 15%">Imagen</th>
+			</tr>
+		</thead>
+		<tbody>
+				<% @obras.each do |obra|%>
+			<tr style="text-align: center;border: 1px solid grey;padding: 15px;">
+				<td>
+					<%= obra.titulo%>
+				</td>
+				<td>
+					<%= obra.tecnica%>
+				</td>
+				<td>
+					<%= obra.medidas%>
+				</td>
+				<td>
+					<%= obra.año.strftime("%Y")%>
+				</td>  
+				<td>
+					$<%= obra.precio%>
+				</td>
+				<td>
+					<%= obra.disponibilidad%>
+				</td>
+				<td >
+					<div style="padding: 15px;">
+					<% if obra.imagen.attached? %>
+	  					<%=image_tag obra.imagen.variant(resize: "100x100")%> 
+				<% end %>
+					</div>
+				</td>
+			</tr>
+				<% end%>
+		</tbody>
+	</table>

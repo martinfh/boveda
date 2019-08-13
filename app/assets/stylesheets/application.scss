@@ -12,30 +12,154 @@
  *
   */
  @import "bootstrap";
+
+.botondonar {
+  padding-top: 30px;
+}
+.boton-idioma {
+  float: right;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+  background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+  background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+  background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+  background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+  background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+  background-color:#ededed;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #d6bcd6;
+  display:inline-block;
+  cursor:pointer;
+  color:#575757;
+  font-family:Courier New;
+  font-size:19px;
+  padding:7px 25px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #e1e2ed;
+}
+.boton-idioma:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+  background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+  background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+  background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+  background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+  background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+  background-color:#bab1ba;
+  text-decoration: none;
+}
+
+.button-idioma:active {
+  position:relative;
+  top:1px;
+}
+
+.field {
+  text-align:center;
+  
+}
+.myButton {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #dedede));
+  background:-moz-linear-gradient(top, #ffffff 5%, #dedede 100%);
+  background:-webkit-linear-gradient(top, #ffffff 5%, #dedede 100%);
+  background:-o-linear-gradient(top, #ffffff 5%, #dedede 100%);
+  background:-ms-linear-gradient(top, #ffffff 5%, #dedede 100%);
+  background:linear-gradient(to bottom, #ffffff 5%, #dedede 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dedede',GradientType=0);
+  background-color:#ffffff;
+  -moz-border-radius:42px;
+  -webkit-border-radius:42px;
+  border-radius:42px;
+  border:1px solid #000000;
+  display:inline-block;
+  cursor:pointer;
+  color:#575757;
+  font-family:Courier New;
+  font-size:20px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #d6d6d6;
+}
+.myButton:hover {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dedede), color-stop(1, #ffffff));
+  background:-moz-linear-gradient(top, #dedede 5%, #ffffff 100%);
+  background:-webkit-linear-gradient(top, #dedede 5%, #ffffff 100%);
+  background:-o-linear-gradient(top, #dedede 5%, #ffffff 100%);
+  background:-ms-linear-gradient(top, #dedede 5%, #ffffff 100%);
+  background:linear-gradient(to bottom, #dedede 5%, #ffffff 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dedede', endColorstr='#ffffff',GradientType=0);
+  background-color:#dedede;
+  text-decoration: none;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+
+body {
+  margin-top: 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#notice_wrapper {
+  top: 0;
+  left: 0;
+  position: absolute;    
+  width: 100%;
+  z-index: 999;
+  background: rgba(135,216,211,0.85);
+  padding-top: 10px;
+  font-family:Courier New;
+  height: 50px;
+.alert .notice {
+  padding: 2.5rem 0;
+  text-align: center;
+  margin:0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  }
+}
+
 .tabla-artista {
   width: 100%;
+  padding-top: 10px;
+}
+
+.tabla-artista td {
+  font-size: 13px;
 }
 
 .campo_busqueda{
   text-align: right;
-  padding-top: 20px;
-  padding-right: 15px;
+  margin-right:10px;
 }
+
 .boton_buscar{
   padding: 2px;
   background-color: white;
   color: black;
   outline-style: solid;
-  outline-width: 2px;
+  outline-width: 1px;
+  font-family:Courier New;
+  padding-top: 5px;
 }
+
 .busqueda{
   padding:2px;
-  outline-width: 2px;
+  outline-width: 1px;
   outline-style: solid;
 }
+
 div {
 	text-align: center;
 }
+
 tr:hover {
   background-color:#F0FFF0;}
 
@@ -45,9 +169,9 @@ tr:hover {
 
 .box {
   float: left;
-  width: 50%;
-  padding: 15px;
-  height: 55px;
+  width: 100%;
+  margin-bottom: -40px;
+  padding-top: 50px;
 }
 
 .clearfix::after {
@@ -68,6 +192,7 @@ th {
     width: 200px;
 
 }
+
 .colorboton{
 	color: black;
 }
@@ -75,6 +200,7 @@ th {
 .colorboton:hover{
 	color: black;
 }
+
 .boton_galeria{
 	width: 100px;
 	border: 3px solid black;
@@ -94,17 +220,19 @@ th {
 .boton_galeria:hover {
 	background-color: white
 }
+
 .boton_galeria:active {
 	background-color: white;
   box-shadow: 0 2px #666;
   transform: translateY(4px);
 }
-.boton_nuevaobra{
-	width: 120px;
-	border: 3px solid black;
+.boton_nuevaobra {
+	width: 130px;
+	border: 1px solid black;
 	display: inline-block;
   padding: 10px 10px;
-  font-size: 15px;
+  font-family:Courier New;
+  font-size: 13px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -113,10 +241,12 @@ th {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 5px #999;
+  margin-bottom: -100px;
 }
 
 .boton_nuevaobra:hover {
-	background-color: white
+	background-color: white;
+  text-decoration: none;
 }
 .boton_nuevaobra:active {
 	background-color: white;
@@ -125,11 +255,13 @@ th {
 }
 
 .boton_exportar{
+  float: left;
 	width: 130px;
-	border: 3px solid black;
+	border: 1px solid black;
 	display: inline-block;
   padding: 10px 10px;
-  font-size: 15px;
+  font-family:Courier New;
+  font-size: 12px;
   cursor: pointer;
   text-align: center;
   outline: none;
@@ -140,7 +272,7 @@ th {
 }
 
 .boton_exportar:hover {
-	background-color: yellow
+	background-color: yellow;
 }
 .boton_exportar:active {
 	background-color: yellow;
@@ -152,6 +284,7 @@ td {
 	border-left: 4px solid #000;
 	padding: 10px;
   text-align: center;
+
   
 }
 
@@ -171,7 +304,7 @@ th {
 }
 
 .fondoshowobra{
-	background-color: #F8F8FF;
+
 }
 
 .fondogradienteindex{
@@ -183,7 +316,8 @@ th {
 }
 .contenedordeobras{
 	background: #FFFFFF;
-	border: dotted;
+  border-style: solid;
+	border-width: 1px;
 	overflow: hidden; 
   -moz-border-radius: 13px 13px 13px 13px;
   -webkit-border-radius: 13px 13px 13px 13px;
@@ -216,7 +350,7 @@ th {
 }
 .recuadrologin{
   color: black;  
-  text-align: center; 
+  text-align: left; 
   background: #f5f3f0; 
   overflow: hidden; 
   -webkit-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
@@ -226,7 +360,7 @@ th {
   -webkit-border-radius: 13px 13px 13px 13px;
   padding: 20px; 
   height: 500px;
-  width: 550px;
+  width: 450px;
   margin-top: 50px;
   margin-right: auto;
   margin-bottom: auto;
@@ -235,7 +369,7 @@ th {
 
 .recuadroregistrarse{
   color: black;  
-  text-align: center; 
+  text-align: left; 
   background: #f5f3f0; 
   overflow: hidden; 
   -webkit-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
@@ -269,11 +403,12 @@ th {
   margin-right: auto;
   margin-bottom: auto;
   margin-left: auto;
+  padding-left: 30px;
 }
 
-.recuadronuevaobragalerias{
+.recuadronuevaobra-galeria{
   color: black;  
-  text-align: center; 
+  text-align: left; 
   background: #f5f3f0; 
   overflow: hidden; 
   -webkit-box-shadow: 10px 10px 34px 19px rgba(107,81,107,1);
@@ -282,7 +417,7 @@ th {
   -moz-border-radius: 13px 13px 13px 13px;
   -webkit-border-radius: 13px 13px 13px 13px;
   padding: 20px; 
-  height: 800px;
+  height: auto;
   width: 600px;
   margin-top: 50px;
   margin-right: auto;
@@ -301,7 +436,7 @@ th {
   -moz-border-radius: 13px 13px 13px 13px;
   -webkit-border-radius: 13px 13px 13px 13px;
   padding: 20px; 
-  height: 290px;
+  height: auto;
   width: 340px;
   margin-top: 50px;
   margin-right: auto;
@@ -369,4 +504,8 @@ th {
 @keyframes fadeout {
 	from {opacity: 1;}
 	to {opacity: 0;}
+}
+
+.actions {
+  
 }

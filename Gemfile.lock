@@ -147,6 +147,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
     pdf-core (0.7.0)
+    pg (1.1.4)
     popper_js (1.14.3)
     prawn (2.2.2)
       pdf-core (~> 0.7.0)
@@ -176,6 +177,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails-i18n (5.1.3)
+      i18n (>= 0.7, < 2)
+      railties (>= 5.0, < 6)
     railties (5.2.1)
       actionpack (= 5.2.1)
       activesupport (= 5.2.1)
@@ -207,6 +211,9 @@ GEM
     selenium-webdriver (3.14.1)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
+    simple_form (4.1.0)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -265,12 +272,15 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   mini_magick
   money (~> 6.13, >= 6.13.1)
+  pg
   prawn (~> 2.2, >= 2.2.2)
   prawn-table (~> 0.2.2)
   puma (~> 3.11)
   rails (~> 5.2.1)
+  rails-i18n
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
@@ -285,4 +295,4 @@ RUBY VERSION
    ruby 2.3.7p456
 
 BUNDLED WITH
-   1.16.6
+   2.0.1

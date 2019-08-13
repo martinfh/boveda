@@ -4,7 +4,6 @@
      <div class = recuadrologin>
   &nbsp;&nbsp; 
       <div>
-        <h2>Ingresar</h2>
   &nbsp;&nbsp; 
         <div>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -25,8 +24,9 @@
       </div>
     <% end %>
     </div>
+    &nbsp;&nbsp;
       <div class="actions">
-        <%= f.submit "Entrar" %>
+        <%= f.submit 'Entrar/Sign In' %>
        </div>
     <% end %>
   &nbsp;&nbsp;

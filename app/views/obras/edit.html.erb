@@ -1,5 +1,10 @@
+
+<body class= "bg">
+	<div class = "fadein contenedorforms">
+		<div class = recuadronuevaobra>
+			<div style="text-align: center;">
 <h1>Editar Obra</h1>
-	<%= form_for @obra, url: obras_path, :method => :POST do |f| %>
+	<%= form_for (@obra) do |f| %>
 	<p>
 		<%= f.label :titulo %><br>
 		<%= f.text_field :titulo %>
@@ -22,7 +27,7 @@
 	</p>
 	<p>
 		<%=f.label :imagenes %><br>
-		<%=f.file_field :imagen, multiple: true %>
+		<%=f.file_field :imagen %>
 	</p>
 	<p>
 		<%= f.label :disponibilidad %><br>
@@ -32,3 +37,8 @@
 		<%= f.submit 'Editar Obra' %> 
 	</p>
 		<% end %>
+	</div>
+
+</div>
+</div>
+</body>

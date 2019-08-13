@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<body>
+	<div style=" width: 100%; margin-left: 100px; padding-top: 50px;">
+		<% if @obra.imagen.attached? %>
+    <%= image_tag @obra.imagen ,style:"width:550px", align: "center";%>
+<% else %>
+    Sin foto adjuntada
+<% end %>
+		<p>
+		
+		</p>
+		&nbsp;&nbsp;
+		<div style="text-align: left;">
+		<p><strong>
+		<%= @obra.titulo%>
+		</strong>
+		</p>
+		<p><i>
+		<%= @obra.tecnica%>
+		</i>
+		</p>
+		<p>
+		<%= @obra.medidas%>
+		</p>
+		<p>
+		<%= @obra.año.strftime("%Y")%>
+		</p>
+	</div>
+	</div>
+</body>
+</html>

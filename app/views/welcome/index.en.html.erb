@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+		<div>
+			<%= link_to 'ES', welcome_index_path(locale: :es), class: 'boton-idioma'%>
+		</div>
+	<body class= "bg">
+		<div>
+			<h1 class=fadein > 
+			<%= image_tag 'logo/boveda.png',style:"height:280px; margin-left:50px;";%>
+			</h1>
+		</div>
+		<div class= recuadroinicio>
+			<div class = fadein_largo align=center>
+				<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
+				</p>
+			</div>
+		
+					<div  style="text-align:center; width: 100%;">	
+						<div> 
+							<%=link_to 'Sign in', new_user_session_path, class: 'myButton'%>
+						</div>
+						
+							<form  class="botondonar" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="JL6HTC22HTKNY" />
+<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donar con el botón PayPal" />
+<img alt="" border="0" src="https://www.paypal.com/es_MX/i/scr/pixel.gif" width="1" height="1" />
+						
+						
+					</div>
+				</div>
+
+		
+	</body>
+</html>

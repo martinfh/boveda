@@ -1,5 +1,7 @@
 es:
   devise:
+    sign_in: "entrar"
+    password: "contraseña"
     confirmations:
       confirmed: "Su cuenta ha sido confirmada."
       confirmed_and_signed_in: "Su cuenta ha sido confirmada. Ha sido identificado correctamente."

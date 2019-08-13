@@ -1,0 +1,42 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<body style="align-items: center;"class = fondoshowobra>
+	<p style="text-align: center; padding-bottom: 20px;"><strong>Certificado de venta de Obra</strong></p><br>
+	<p style="width: 90%;text-align: left; margin-bottom: 50px; font-size: 12px; ">
+		Certifico que la obra <%=@obra.titulo%> realizada en el año <%= @obra.año.strftime("%Y")%> fue adquirida por ....................................................<br> el dia ....del mes de ............. del año ........
+	</p>
+	<div class=contenedordeobras style="text-align: left; width: 70%; font-size: 12px;">
+		<p>
+		<%= image_tag @obra.imagen ,style:"width:400px", align: "center";%>
+		</p>
+		<p><strong>
+		<%= @obra.titulo%>
+		</strong>
+		</p>
+		<p><i>
+		<%= @obra.tecnica%>
+		</i>
+		</p>
+		<p>
+		<%= @obra.medidas%>
+		</p>
+		<p>
+		<%= @obra.año.strftime("%Y")%>
+		</p>
+		
+	</div>
+<div style="display: flex; width: 100%; padding-top: 200px; font-size: 12px;">
+	<div style="width: 30%;text-align: center;float: left;">
+		_________________________<br>
+		Firma del Artista
+	</div>
+		<div style="width: 30%;text-align: center;float: right;">
+		_________________________<br>
+		Firma del comprador
+	</div>
+
+</div>
+</body>
+<footer>
+	
+</footer>
